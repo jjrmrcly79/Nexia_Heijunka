@@ -1,0 +1,118 @@
+.home-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.hero-accent {
+    color: var(--color-accent);
+    font-size: 2rem;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-top: var(--space-sm);
+    letter-spacing: 0.02em;
+}
+
+.hero-desc {
+    margin-top: var(--space-md);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+}
+
+.hero-stats .stat-value {
+    font-size: 1.6rem;
+}
+
+.home-modules {
+    margin-top: var(--space-lg);
+}
+
+.home-modules h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.module-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    text-decoration: none;
+    cursor: pointer;
+    padding: var(--space-lg);
+    animation: fadeIn var(--transition-slow) ease-out both;
+}
+
+.module-card:hover {
+    transform: translateY(-2px);
+}
+
+.module-icon {
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent-dim);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+}
+
+.module-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.module-info p {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.module-arrow {
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+}
+
+.module-card:hover .module-arrow {
+    color: var(--color-accent);
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+}

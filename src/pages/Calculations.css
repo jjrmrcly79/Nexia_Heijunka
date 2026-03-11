@@ -1,0 +1,161 @@
+.calc-inputs-summary {
+    margin-bottom: var(--space-lg);
+}
+
+.calc-inputs-summary h4 {
+    margin-bottom: var(--space-md);
+    font-size: 0.9rem;
+}
+
+.inputs-row {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.input-chip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 16px;
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+}
+
+.chip-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.chip-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-bright);
+}
+
+.calc-cards {
+    margin-top: var(--space-md);
+}
+
+.calc-metric-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.metric-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.metric-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    font-size: 1.2rem;
+}
+
+.metric-formula {
+    padding: 8px 12px;
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+.metric-formula code {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+}
+
+.metric-computation {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.metric-result {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+}
+
+.result-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-text-bright);
+    line-height: 1;
+}
+
+.result-unit {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.metric-interpretation {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.metric-interpretation strong {
+    color: var(--color-text-bright);
+}
+
+.metric-gauge {
+    margin-top: auto;
+}
+
+.gauge-bar {
+    height: 6px;
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.gauge-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+.gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--color-text-muted);
+    margin-top: 4px;
+}
+
+.metric-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    margin-top: auto;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px;
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-sm);
+}
+
+.detail-label {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+}
+
+.detail-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-bright);
+}

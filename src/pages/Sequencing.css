@@ -1,0 +1,102 @@
+.mix-sequence-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: var(--space-md);
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.mix-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 8px;
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(100, 255, 218, 0.08);
+    border-radius: var(--radius-sm);
+    min-width: 40px;
+    transition: all var(--transition-fast);
+    cursor: default;
+}
+
+.mix-item:hover {
+    border-color: var(--item-color, var(--color-accent));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mix-item-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.mix-item-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    text-transform: uppercase;
+}
+
+.mix-item-idx {
+    font-size: 0.6rem;
+    color: var(--color-text-muted);
+}
+
+.mix-dist-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.05);
+    font-size: 0.85rem;
+}
+
+.mix-dist-row:last-child {
+    border-bottom: none;
+}
+
+.mix-bar-track {
+    width: 100px;
+    height: 6px;
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.mix-bar-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+.analysis-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.analysis-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--space-md);
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-sm);
+}
+
+.analysis-label {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.analysis-value {
+    font-weight: 600;
+    color: var(--color-text-bright);
+}
