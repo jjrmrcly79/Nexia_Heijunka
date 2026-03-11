@@ -6,6 +6,7 @@ import Calculations from './pages/Calculations';
 import Sequencing from './pages/Sequencing';
 import HeijunkaBox from './pages/HeijunkaBox';
 import Dashboards from './pages/Dashboards';
+import Manual from './pages/Manual';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/sequencing" element={<Sequencing />} />
           <Route path="/heijunka-box" element={<HeijunkaBox />} />
           <Route path="/dashboards" element={<Dashboards />} />
+          <Route path="/manual" element={<Manual />} />
         </Routes>
       </main>
     </>

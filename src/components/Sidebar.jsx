@@ -8,6 +8,7 @@ const NAV_ITEMS = [
     { path: '/sequencing', label: 'Secuenciación', icon: '🔄' },
     { path: '/heijunka-box', label: 'Caja Heijunka', icon: '📦' },
     { path: '/dashboards', label: 'Dashboards', icon: '📈' },
+    { path: '/manual', label: 'Manual', icon: '📘' },
 ];
 
 export default function Sidebar() {
