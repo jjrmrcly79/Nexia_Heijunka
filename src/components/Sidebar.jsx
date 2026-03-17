@@ -1,4 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import './Sidebar.css';
 
 const NAV_ITEMS = [
@@ -13,6 +14,10 @@ const NAV_ITEMS = [
 
 export default function Sidebar() {
     const location = useLocation();
+    const { user, signOut } = useAuth();
+
+    const displayName = user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Usuario';
+    const displayEmail = user?.email || '';
 
     return (
         <aside className="sidebar">
@@ -46,8 +51,21 @@ export default function Sidebar() {
             </nav>
 
             <div className="sidebar-footer">
-                <div className="sidebar-version">v1.0.0</div>
-                <div className="sidebar-tagline">Lean Manufacturing</div>
+                {user && (
+                    <div className="sidebar-user">
+                        <div className="sidebar-user-avatar">
+                            {displayName.charAt(0).toUpperCase()}
+                        </div>
+                        <div className="sidebar-user-info">
+                            <span className="sidebar-user-name">{displayName}</span>
+                            <span className="sidebar-user-email">{displayEmail}</span>
+                        </div>
+                    </div>
+                )}
+                <button className="sidebar-logout-btn" onClick={signOut} title="Cerrar sesión">
+                    🚪 Cerrar sesión
+                </button>
+                <div className="sidebar-version">v1.0.0 · Lean Manufacturing</div>
             </div>
         </aside>
     );
