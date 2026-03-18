@@ -7,6 +7,7 @@ import Sequencing from './pages/Sequencing';
 import HeijunkaBox from './pages/HeijunkaBox';
 import Dashboards from './pages/Dashboards';
 import Manual from './pages/Manual';
+import About from './pages/About';
 import Login from './pages/Login';
 import { useAuth } from './context/AuthContext';
 
@@ -23,6 +24,7 @@ function ProtectedLayout() {
                     <Route path="/heijunka-box" element={<HeijunkaBox />} />
                     <Route path="/dashboards" element={<Dashboards />} />
                     <Route path="/manual" element={<Manual />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
             </main>
